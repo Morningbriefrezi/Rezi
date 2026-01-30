@@ -112,12 +112,16 @@ def create_morning_message():
     """Create the complete morning briefing message"""
     
     now = datetime.now()
-    day_name_geo = ['ორშაბათი', 'სამშაბათი', 'ოთხშაბათი', 'ხუთშაბათი', 'პარასკევი', 'შაბათი', 'კვირა'][now.weekday()]
     
-    message = f"""
-🌅 *დილა მშვიდობისა! Good Morning!* {get_weather_emoji()}
+    # Georgian day names - split to avoid f-string backslash issue
+    day_names_geo = ['ორშაბათი', 'სამშაბათი', 'ოთხშაბათი', 'ხუთშაბათი', 'პარასკევი', 'შაბათი', 'კვირა']
+    day_name_geo = day_names_geo[now.weekday()]
+    weather_emoji = get_weather_emoji()
+    date_str = now.strftime('%B %d, %Y')
+    
+    message = f"""🌅 *დილა მშვიდობისა! Good Morning!* {weather_emoji}
 
-📅 {day_name_geo} | {now.strftime('%B %d, %Y')}
+📅 {day_name_geo} | {date_str}
 
 ━━━━━━━━━━━━━━━━━━━━
 
@@ -143,8 +147,7 @@ def create_morning_message():
 
 ━━━━━━━━━━━━━━━━━━━━
 
-🚀 *დღეს შენი დღეა! Make it count!* 💪
-    """
+🚀 *დღეს შენი დღეა! Make it count!* 💪"""
     
     return message.strip()
 
