@@ -2,8 +2,8 @@ name: Daily Morning Briefing
 
 on:
   schedule:
-    # Runs every day at 11:38 Tbilisi time (05:00 UTC)
-    - cron: '0 4 * * *'
+    # Runs every day at 11:45 Tbilisi time (02:00 UTC)
+    - cron: '0 5 * * *'
   workflow_dispatch:
 
 jobs:
