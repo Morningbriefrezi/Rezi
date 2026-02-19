@@ -27,3 +27,38 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+```
+
+**One new secret to add:**
+Go to **Settings → Secrets → Actions** and add `OPENAI_API_KEY` with your OpenAI key. The `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` you already have.
+
+---
+
+**What your brief will look like every morning at 7:00 AM Tbilisi:**
+```
+🌅 დილა მშვიდობისა! Good Morning, Rezi!
+📅 ხუთშაბათი | February 19, 2026
+
+━━━━━━━━━━━━━━━━━━━━
+📰 TODAY'S INTEL:
+━━━━━━━━━━━━━━━━━━━━
+
+🤖 AI & Tech
+OpenAI released... [English summary]
+OpenAI-მ გამოუშვა... [Georgian summary]
+
+₿ Crypto & Finance
+Bitcoin surged... 
+ბიტკოინი გაიზარდა...
+
+🚀 Space & Astronomy  ...
+🛍️ E-commerce ...
+🇬🇪 Georgian Business (BM.ge) ...
+
+💡 Today's Takeaway: ...
+
+━━━━━━━━━━━━━━━━━━━━
+🪐 ASTROMAN — Top 3 Tasks Today:
+1️⃣ Show one best-seller with real use-case photo.
+2️⃣ Post one astronomy fact.
+3️⃣ Create a bundle offer.
